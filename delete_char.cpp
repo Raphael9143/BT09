@@ -3,18 +3,18 @@ using namespace std;
 
 int strlen(const char* a);
 char* strcopy(const char* a);
-char* delete_char(char* a, char c);
+char* delete_char(const char* a, char c);
 
 int main()
 {
-    char* a = new char;
-    cin >> a;
+    const char* a = "Hello";
+
     char* result = delete_char(a, 'e');
     cout << result;
     return 0;
 }
 
-char* delete_char(char* a, char c)
+char* delete_char(const char* a, char c)
 {
     int current_pos = 0;
     int i = 0;
